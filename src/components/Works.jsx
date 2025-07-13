@@ -1,5 +1,5 @@
-import React from "react";
-import Tilt from "react-tilt";
+import React, { useRef, useEffect } from "react";
+import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -7,6 +7,28 @@ import { github, link } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+
+const Tilt = ({ options, children, className }) => {
+  const tiltRef = useRef(null);
+
+  useEffect(() => {
+    if (tiltRef.current) {
+      VanillaTilt.init(tiltRef.current, options);
+    }
+
+    return () => {
+      if (tiltRef.current?.vanillaTilt) {
+        tiltRef.current.vanillaTilt.destroy();
+      }
+    };
+  }, [options]);
+
+  return (
+    <div ref={tiltRef} className={className}>
+      {children}
+    </div>
+  );
+};
 
 const ProjectCard = ({
   index,
@@ -45,16 +67,18 @@ const ProjectCard = ({
                 className='w-1/2 h-1/2 object-contain'
               />
             </div>
-            {live_link && <div
-              onClick={() => window.open(live_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img
-                src={link}
-                alt='link'
-                className='w-1/2 h-1/2 object-contain'
-              />
-            </div>}
+            {live_link && (
+              <div
+                onClick={() => window.open(live_link, "_blank")}
+                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              >
+                <img
+                  src={link}
+                  alt='link'
+                  className='w-1/2 h-1/2 object-contain'
+                />
+              </div>
+            )}
           </div>
         </div>
 
@@ -93,13 +117,13 @@ const Works = () => {
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
           Explore my portfolio to see a showcase of my skills
-           and experience through real-world projects. Each
-            project is accompanied by a brief description, complete
-             with links to code repositories and live demos. These
-              examples highlight my proficiency in solving complex
-               problems, working with diverse technologies, and
-                managing projects with efficiency and expertise.
-                 Dive in to see how I bring ideas to life!
+          and experience through real-world projects. Each
+          project is accompanied by a brief description, complete
+          with links to code repositories and live demos. These
+          examples highlight my proficiency in solving complex
+          problems, working with diverse technologies, and
+          managing projects with efficiency and expertise.
+          Dive in to see how I bring ideas to life!
         </motion.p>
       </div>
 
