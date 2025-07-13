@@ -32,9 +32,9 @@ const ServiceCard = ({ index, title, icon }) => (
   <Tilt
     className='xs:w-[250px] w-full'
     options={{
-      max: 45,
+      max: 22.5,
       scale: 1,
-      speed: 450,
+      speed: 400,
     }}
   >
     <motion.div
