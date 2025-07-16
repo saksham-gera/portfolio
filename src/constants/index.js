@@ -22,6 +22,7 @@ import {
   designwithspark,
   leaseposh,
   sas,
+  svnitresume,
   threejs,
 } from "../assets";
 
@@ -120,36 +121,10 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Executive",
-    company_name: "Association for Computing Machinery",
-    icon: acm,
-    iconBg: "#E6DEDD",
-    date: "Sep 2023 - Feb 2024",
-    points: [
-      "Organised 2 National Level Hackathons And 4 Yearly Hackathons In NIT Surat.",
-      "Collaborating with teams including designers, product managers, and other developers to Aware School Students in The Hour Of Code.",
-      "Implemented Effective Code Writings And Learnt To write The Scalable Code.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Junior Developer",
-    company_name: "Google Developer Students Club",
-    icon: google,
-    iconBg: "#383E56",
-    date: "Oct 2023 - Mar 2024",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
     title: "SDE Intern",
     company_name: "WictroniX",
     icon: wictronix,
-    iconBg: "#E6DEDD",
+    iconBg: "#fff",
     date: "April 2024 - June 2024",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -159,10 +134,10 @@ const experiences = [
     ],
   },
   {
-    title: "Technical Lead",
+    title: "Software Engineering Intern",
     company_name: "Megascale",
     icon: megascale,
-    iconBg: "#383E56",
+    iconBg: "#fff",
     date: "July 2024 - Aug 2024",
     points: [
       "Led a team of 5 developers to deliver a fully-functional Flutter app for NEC in just 4 weeks.",
@@ -171,7 +146,21 @@ const experiences = [
       "Achieved a 95% user satisfaction rate for the NEC app, enhancing management processes for over 500 council members.",
     ],
   },
-  
+  {
+    title: "Contributor",
+    company_name: "Alaska, Google Summer of Code",
+    icon: google,
+    iconBg: "#fff",
+    date: "May 2025 - Sep 2025",
+    points: [
+      "Built a ZeroMQ-based communication layer in Python, reducing IPC latency by 40% and improving runtime efficiency.",
+      "Replaced legacy file-sharing and shared-memory systems to enhance scalability and modularity in distributed setups.",
+      "Designed a unified communication protocol to enable seamless distributed control studies across 10+ nodes, improving coordination and system reliability.",
+      "Standardized ZeroMQ edge labels (e.g., 0x1234_Y), significantly improving hypergraph accuracy and consistency.",
+      "Integrated native ZeroMQ edge support into the Concore visual editor, enabling the execution of fully connected hypergraphs and eliminating disjoint structures."
+    ],
+  },
+
 ];
 
 const testimonials = [
@@ -230,10 +219,10 @@ const projects = [
     live_link: "https://htt-2-0.vercel.app"
   },
   {
-    name: "Design With Spark",
+    name: "MyTee3D",
     subtitle: "3D T-Shirt Customisation System",
     description:
-      "• Developed a System using DALL-E API and ThreeJS for AI-Generated Designs on 3D models. • Integrated Gemini Pro API, providing design suggestions and enhancing User Engagement by 15%. • Blended an Editor for Modifying AI-created Designs, enhancing Customisation Options and flexibility. • Enabled Real-time Rendering of design modifications on 3D models, providing Instant Feedback to users.",
+      "• Developed a System using HuggingFace API and ThreeJS for AI-Generated Designs on 3D models. • Integrated Gemini Pro API, providing design suggestions and enhancing User Engagement by 15%. • Blended an Editor for Modifying AI-created Designs, enhancing Customisation Options and flexibility. • Enabled Real-time Rendering of design modifications on 3D models, providing Instant Feedback to users.",
     tags: [
       {
         name: "react",
@@ -249,8 +238,8 @@ const projects = [
       }
     ],
     image: designwithspark,
-    source_code_link: "https://github.com/saksham-gera/DesignWithSpark",
-    live_link: "https://design-with-spark.vercel.app/"
+    source_code_link: "https://github.com/saksham-gera/MyTee3D",
+    live_link: "https://MyTee3D.vercel.app/"
   },
   {
     name: "LeasePosh",
@@ -278,6 +267,37 @@ const projects = [
     image: leaseposh,
     source_code_link: "https://github.com/saksham-gera/leaseposh-website",
     live_link: "https://leaseposh.vercel.app/"
+  },
+  {
+    name: "SVNIT Resume Builder",
+    subtitle: "Streamlined Resume Generation Platform",
+    description:
+      "• Streamlined resume creation for 400+ SVNIT students by eliminating LaTeX-related hassles and formatting errors. • Applied Axios for API requests, improving response times by 30% and reducing latency. • Implemented JWT for secure user Authentication and Authorization, ensuring robust Data Protection. • Enacted Context API for efficient State Management, reducing code clutter by 20% and simplifying maintenance.",
+    tags: [
+      {
+        name: "reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "postgresql",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "expressjs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "purple-text-gradient",
+      },
+    ],
+    image: svnitresume,
+    source_code_link: "https://github.com/saksham-gera/SVNIT-Resume-Builder",
+    live_link: "https://svnit.make-it.ro/"
   },
 ];
 

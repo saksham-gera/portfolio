@@ -31,6 +31,7 @@ import google from "./company/google.png";
 import designwithspark from "./designwithspark.png";
 import leaseposh from "./leaseposh.png";
 import sas from "./sas.png";
+import svnitresume from "./svnitresume.png";
 
 export {
   logo,
@@ -63,4 +64,5 @@ export {
   designwithspark,
   leaseposh,
   sas,
+  svnitresume
 };
